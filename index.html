@@ -1,98 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Nails - Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feito por Gabi - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* Carrossel tipo app Fotos */
+    .carousel-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      border-radius: 8px;
+      margin-top: 20px;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-slide {
+      display: inline-block;
+      width: 330px;
+      height: 500px;
+      margin-right: 10px;
+      scroll-snap-align: center;
+      border-radius: 8px;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Botões circulares com setas */
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(51, 51, 51, 0.5);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-button:hover {
+      background-color: rgba(51, 51, 51, 0.8);
+    }
+
+    #prevBtn {
+      left: 8px;
+    }
+
+    #nextBtn {
+      right: 8px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Bella<span>Nails</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="materiais.html">Materiais</a></li>
-                    <li><a href="preparo.html">Preparo</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+  <header>
+    <div class="container">
+      <h1 class="logo">Feito por <span>Gabi</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="materiais.html">Materiais</a></li>
+          <li><a href="preparo.html">Preparo</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2 class="animate-title">Unhas em Gel <span>Perfeitas</span></h2>
+          <p class="animate-text">Conheça mais sobre unhas em gel e veja algumas das criações que fiz com muito carinho.</p>
+          <a href="contato.html" class="btn animate-btn">Entre em Contato</a>
         </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="animate-title">Unhas em Gel <span>Perfeitas</span></h2>
-                    <p class="animate-text">Conheça mais sobre unhas em gel e veja algumas das criações que fiz com muito carinho.</p>
-                    <a href="contato.html" class="btn animate-btn">Entre em Contato</a>
-                </div>
-                <div class="hero-image">
-                    <img src="unhaaaaa.jpeg" alt="Unhas em gel decoradas" class="animate-image">
-                </div>
-            </div>
-        </section>
-
-        <section class="destaques">
-            <div class="container">
-                <h2>Por Que Escolher Nossos Serviços?</h2>
-                <div class="destaques-grid">
-                    <div class="destaque-item">
-                        <i class="fas fa-gem"></i>
-                        <h3>Durabilidade</h3>
-                        <p>Unhas que permanecem intactas por até 3 semanas sem lascar ou descascar.</p>
-                    </div>
-                    <div class="destaque-item">
-                        <i class="fas fa-palette"></i>
-                        <h3>Design Exclusivo</h3>
-                        <p>Criações personalizadas para refletir um estilo único e personalidade.</p>
-                    </div>
-                    <div class="destaque-item">
-                        <i class="fas fa-heart"></i>
-                        <h3>Cuidado</h3>
-                        <p>Técnicas que preservam a saúde natural das suas unhas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>BellaNails</h3>
-                    <p>Faço unhas em gel por diversão e amor à arte..</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Intagram: @bagii_kk</p>
-                    <p><i class="fas fa-phone"></i> +55 63 99218-9549</p>
-                    <p><i class="fas fa-envelope"></i> gabriela.marinho2@estudante.ifto.edu.br</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-image" style="position: relative;">
+          <div class="carousel-wrapper" id="carousel">
+            <div class="carousel-slide"><img src="unhaaaaa.jpeg" alt="Unha 1" /></div>
+            <div class="carousel-slide"><img src="unha2.jfif" alt="Unha 2" /></div>
+            <div class="carousel-slide"><img src="unha3.jfif" alt="Unha 3" /></div>
+            <div class="carousel-slide"><img src="unha4.jfif" alt="Unha 4" /></div>
+            <div class="carousel-slide"><img src="unha5.jfif" alt="Unha 5" /></div>
+            <div class="carousel-slide"><img src="unha6.jfif" alt="Unha 6" /></div>
+            <div class="carousel-slide"><img src="unha7.jfif" alt="Unha 7" /></div>
+            <div class="carousel-slide"><img src="unha8.jfif" alt="Unha 8" /></div>
+            <div class="carousel-slide"><img src="unha9.jfif" alt="Unha 9" /></div>
+            <div class="carousel-slide"><img src="unha10.jfif" alt="Unha 10" /></div>
+          </div>
+          <button class="carousel-button" id="prevBtn" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-button" id="nextBtn" aria-label="Próximo">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 BellaNails. .</p>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="destaques">
+      <div class="container">
+        <h2>Por Que Escolhi Usar Unhas em Gel?</h2>
+        <div class="destaques-grid">
+          <div class="destaque-item">
+            <i class="fas fa-gem"></i>
+            <h3>Durabilidade</h3>
+            <p>Unhas que permanecem intactas por até 3 semanas sem lascar ou descascar.</p>
+          </div>
+          <div class="destaque-item">
+            <i class="fas fa-palette"></i>
+            <h3>Design Exclusivo</h3>
+            <p>Criações personalizadas para refletir um estilo único e personalidade.</p>
+          </div>
+          <div class="destaque-item">
+            <i class="fas fa-heart"></i>
+            <h3>Cuidado</h3>
+            <p>Técnicas que preservam a saúde natural das suas unhas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Feito por Gabi</h3>
+          <p>Faço unhas em gel por diversão e amor à arte..</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Instagram: @bagii_kk</p>
+          <p><i class="fas fa-phone"></i> +55 63 99218-9549</p>
+          <p><i class="fas fa-envelope"></i> gabriela.marinho2@estudante.ifto.edu.br</p>
+        </div>
+        <div class="footer-section">
+          <h3>Redes Sociais</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Feito por Gabi.</p>
+    </div>
+  </footer>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    const slideWidth = 330 + 10; // largura da imagem + margin-right
+
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
